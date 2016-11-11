@@ -22,11 +22,50 @@
     <![endif]-->
   </head>
   <body>
-<div class="container">
+
+<div class="spacer"></div>
+
+<nav class="navbar navbar-default navbar-transparent navbar-fixed-top navbar-transparent" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">INVASIV'ALERTE</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Détectons les espèces envahissantes ensemble</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+<div id="wrapper">
   <div class="row">
-   <div class="col-md-4 col-md--offset-4">
+   <div class="col-md-4 col-lg-12">
     <h1>INVASIV'ALERTE</h1>
-    <h2>Détectons les espèces envahissantes ensemble ! </h2>
+    
+    <h2>Détectons les espèces envahissantes ensemble! </h2>
    </div>
   </div>
 </div>
@@ -43,30 +82,32 @@
 
 <div class="spacer"></div>
 
-<h4>Suivez-nous</h4>
+  <div class="container-fluid" id="footer">
+    <div class="row">
+      <div class="col-xs-6 col-sm-3">
+        <ul class="list-inline social">
+          <li>
+            <a href="https://twitter.com/o-invasivalerte"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://facebook.com/invasivalerte"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://instagram.com/invasivalerte"><i class="fa fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://youtube.com/invasivalerte"><i class="fa fa-youtube"></i></a>
+          </li>
+        </ul>
+     </div> 
 
-    <ul>
-      <li>
-        Sur <a href="https://twitter.com/o-invasivalerte">twitter <i class="fa fa-twitter"></i></a>
-      </li>
-      <li>
-        Sur <a href="https://facebook.com/invasivalerte">facebook <i class="fa fa-facebook"></i></a>
-      </li>
-      <li>
-        Sur <a href="https://instagram.com/invasivalerte">instagram <i class="fa fa-instagram"></i></a>
-      </li>
-      <li>
-        Sur <a href="https://youtube.com/invasivalerte">youtube <i class="fa fa-youtube"></i></a>
-      </li>
-    </ul>
-
-    <p>
-      Invasiv'Alert est une start'up créée dans le cadre de la GreenTech Verte de <a href="http://www.developpement-durable.gouv.fr/Greentech-verte">GreenTech Verte</a> et <a href="http://www.developpement-durable.gouv.fr/Green-Tech-Verte-l-incubateur">incubée </a> à <a href="https://twitter.com/EcoledesPonts">l'Ecole des Ponts <i class="fa fa-twitter"></i></a>
-      
-    </p>
-
-    <!-- TODO: Here goes your content! -->
-
+       <div class="col-xs-6 col-sm-9">
+            <p class="text-right">
+              Invasiv'Alert est une start'up créée dans le cadre de la <a href="http://www.developpement-durable.gouv.fr/Greentech-verte">GreenTech Verte</a> et <a href="http://www.developpement-durable.gouv.fr/Green-Tech-Verte-l-incubateur">incubée </a> à <a href="https://twitter.com/EcoledesPonts">l'Ecole des Ponts <i class="fa fa-twitter"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
 
 
     <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
