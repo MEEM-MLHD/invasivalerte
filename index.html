@@ -1,117 +1,192 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <title> - INVASIV'ALERTE - </title>
+  <!-- Site Properties -->
+  <title>Invasiv'alerte</title>
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/site.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/container.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/header.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/image.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/menu.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/dropdown.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/button.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/list.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/icon.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="assets/semantic/components/transition.css">
 
+  <link rel="stylesheet" type="text/css" href="assets/css/my.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- Leave those next 4 lines if you care about users using IE8 -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
+  <script src="assets/semantic/components/visibility.js"></script>
+  <script src="assets/semantic/components/sidebar.js"></script>
+  <script src="assets/semantic/components/transition.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
 
-<div class="spacer"></div>
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
 
-<nav class="navbar navbar-default navbar-transparent navbar-fixed-top navbar-transparent" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">INVASIV'ALERTE</a>
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+  </script>
+</head>
+<body>
+
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+    <a class="active item">Accueil</a>
+    <a class="item">Projet</a>
+    <a class="item">Equipe</a>
+    <div class="right menu">
+      <div class="item">
+          <a href="https://twitter.com/o-invasivalerte"><i class="twitter icon"></i></a>
+		  <a href="https://facebook.com/invasivalerte"><i class="facebook icon"></i></a>
+		  <a href="https://instagram.com/invasivalerte"><i class="instagram icon"></i></a>
+		  <a href="https://youtube.com/invasivalerte"><i class="youtube icon"></i></a>
+        <a class="ui button">Nous contacter</a>
+      </div>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Détectons les espèces envahissantes ensemble</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-
-
-<div id="wrapper">
-  <div class="row">
-   <div class="col-md-4 col-lg-12">
-    <h1>INVASIV'ALERTE</h1>
-    
-    <h2>Détectons les espèces envahissantes ensemble! </h2>
-   </div>
   </div>
 </div>
 
-<div class="spacer"></div>
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a class="active item">Accueil</a>
+  <a class="item">Projet</a>
+  <a class="item">Equipe</a>
+  <a class="item">Nous contacter</a>
+</div>
 
-<h3> L'équipe</h3>
-  <ul>
-    <li> Ana <img src="images/icon_635579/icon_635579.png" width="48" class ="staff shadow"></li>
-    <li> Jean-Michel <img src="images/icon_635579/icon_635579.png" width="48" class ="staff shadow"></li>
-    <li> Laurence <img src="images/icon_635579/icon_635579.png" width="48" class ="staff shadow"></li>
-    <li> Stéphane <img src="images/icon_635579/icon_635579.png" width="48" class ="staff shadow"></li>
-  </ul>
 
-<div class="spacer"></div>
+<!-- Page Contents -->
+<div class="pusher">
+  <div class="ui inverted vertical masthead center aligned segment">
 
-  <div class="container-fluid" id="footer">
-    <div class="row">
-      <div class="col-xs-6 col-sm-3">
-        <ul class="list-inline social">
-          <li>
-            <a href="https://twitter.com/o-invasivalerte"><i class="fa fa-twitter"></i></a>
-          </li>
-          <li>
-            <a href="https://facebook.com/invasivalerte"><i class="fa fa-facebook"></i></a>
-          </li>
-          <li>
-            <a href="https://instagram.com/invasivalerte"><i class="fa fa-instagram"></i></a>
-          </li>
-          <li>
-            <a href="https://youtube.com/invasivalerte"><i class="fa fa-youtube"></i></a>
-          </li>
-        </ul>
-     </div> 
-
-       <div class="col-xs-6 col-sm-9">
-            <p class="text-right">
-              Invasiv'Alert est une start'up créée dans le cadre de la <a href="http://www.developpement-durable.gouv.fr/Greentech-verte">GreenTech Verte</a> et <a href="http://www.developpement-durable.gouv.fr/Green-Tech-Verte-l-incubateur">incubée </a> à <a href="https://twitter.com/EcoledesPonts">l'Ecole des Ponts <i class="fa fa-twitter"></i></a>
-            </p>
-          </div>
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <a class="active item">Accueil</a>
+        <a class="item">Projet</a>
+        <a class="item">Equipe</a>
+        <div class="right item">
+          <a href="https://twitter.com/invasivealerte"><i class="twitter icon"></i></a>
+		  <a href="https://facebook.com/invasivalerte"><i class="facebook icon"></i></a>
+		  <a href="https://instagram.com/invasivalerte"><i class="instagram icon"></i></a>
+		  <a href="https://youtube.com/invasivalerte"><i class="youtube icon"></i></a>
+          <a class="ui inverted button">Nous contacter</a>
         </div>
       </div>
+    </div>
+
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+        Invasiv'alerte
+      </h1>
+      <h2>Détectons les espèces envahissantes ensemble !</h2>
+    </div>
+
+  </div>
+
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="eight wide column">
+          <h3 class="ui header">Lauréat du #hackbiodiv</h3>
+          <p>Equipe lauréate du hackathon organisé par le ministère de l'environnement et de nombreux partenaires pour préserver la biodiversité.</p>
+        </div>
+        <div class="six wide right floated column">
+          <img src="assets/images/pic_hackriques_laureat_invasiv_team.jpg" class="ui large bordered rounded image">
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  </body>
+  <div class="ui vertical stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+      <div class="center aligned row">
+        <div class="column">
+          <h3>Quelle équipe !</h3>
+          <p>Ana | Jean-Michel | Laurence | Stéphane</p>
+        </div>
+        <div class="column">
+          <h3>"Je pense à Denise qui est inquiète pour ses ruches. Que faire pour l'aider et préserver son activité lorsque des frelons asiatiques détruisent ses ruches et les abeilles qui produisent son meilleur miel ?"</h3>
+          <p>
+            <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Laurence</b> Initiatrice du projet
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui vertical stripe segment">
+    <div class="ui text container">
+      <h3 class="ui header">Parlez nous de vos abeilles !</h3>
+      <p>Bla bla bla.</p>
+      <a class="ui large button">Oui je veux en savoir plus</a>
+    </div>
+  </div>
+
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">About</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Sitemap</a>
+            <a href="#" class="item">Contactez nous</a>
+            <a href="#" class="item">Conditions d'utilisation</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Services</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">App mobile</a>
+            <a href="#" class="item">API</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">En conclusion</h4>
+          <p>Détectons les espèces envahissantes ensemble !</p>
+		  <p>Invasiv'Alert est une start'up créée dans le cadre de la <a href="http://www.developpement-durable.gouv.fr/Greentech-verte.html">GreenTech verte</a> du ministère de l'environnement et incubée à l'<a href="https://twitter.com/EcoledesPonts">Ecole des Ponts</a> <i class="twitter icon"></i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
 </html>
